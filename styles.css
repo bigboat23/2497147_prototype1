@@ -1,0 +1,146 @@
+/* styles.css */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+ /* Header and Navigation */
+header {
+    background-color: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center align the navigation */
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li button:hover {
+    color: #ff7f50;
+  }
+  
+    
+  
+  section {
+    padding: 20px;
+  }
+
+
+.hero {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 100px 0; /* Adjust as needed */
+  }
+  
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hero-text {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+
+.btn {
+    display: inline-block;
+    background-color: #1c1c6b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #333;
+    transform: scale(1.1);
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+/* Styles for the blog section */
+.blog-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center vertically */
+    padding: 40px 0;
+    text-align: center;
+    height: 100vh; /* Set the section height to full viewport height */
+    padding: 40px 0;
+  text-align: center;
+}
+  
+  .blog-content {
+    
+    margin-top: 20px; /* Add space between title and content */
+    max-width: 800px; /* Set the desired maximum width */
+    margin: 0 auto;
+}
+
+/* Add these styles to your existing CSS */
+
+.style-guide-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.style-guide-section article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.style-guide-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; /* Add spacing between the image and text */
+}
+
+.style-guide-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.style-guide-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+  
