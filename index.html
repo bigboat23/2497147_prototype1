@@ -1,117 +1,53 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-  "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <meta name="Mthokozis Kubheka" content="landing home page ">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
   <title>Home</title>
 </head>
 <body>
   
-  <nav>
-    <ul>
-      <li><button id="blogButton">Blogs</button></li>
-      <li><button id="datavisButton">DataVis</button></li>
-      <li><button id="designButton">Design</button></li>
-      <li><button id="styleButton">Styles</button></li>
-      <li><button id="dataartButton">Data Art</button></li>
-    </ul>
-  </nav>
+      <h2 class="Heading">WELCOME</h2>
 
-  
 
-  <section id="hero" class="hero">
-    <article class="hero-content">
-      <section class="hero-text">
-        <h2>All Aboard The Big Boat</h2>
-        <p></p>
-      </section>
-      <figure class="hero-image">
-        <img src="https://th.bing.com/th/id/OIG.iqZ3z6HxbLSnlHrica.j?pid=ImgGn" alt="Hero Image">
-      </figure>
-    </article>
+
+  <section class="image-container">
+    <section class="image" >
+      <iframe src="https://giphy.com/embed/VI2UC13hwWin1MIfmi" width="480" height="320" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+    </section>
+    
+  </section>
+
+  <section class="descriptor">
+    <p class="descriptor">Hover over a button to see the description.</p>
+
   </section>
   
+  
+  
 
-  <section id="blog" class="blog-section">
-    <h2>Blog </h2>
-    <article class="blog-content">
-    <p>
-      <p>  The text discusses various definitions of data visualization and its importance in getting insights from data before processing it into information. According to Card, Mackinlay, and Schneiderman (1999), it is the use of computer-supported and interactive graphical representations of the data in an effort to better comprehend it. Our role in being able to visually perceive the data however is also important. This is highlighted by Kirk (2012). He highlights that the process involves the exchange of information exchange between the messenger (where the data is coming from) and the message (the actual data). With this in mind, my understanding of the term data visualization refers to the process of representing data in graphical means that are supported by computer technologies. The main purpose of the process, it creating an easier-to-comprehend datasheet, and finding certain patterns that start forming. </p>
-      <p>  As I touched upon before, this process is computer-supported and also states the importance of technology plays an important role here. Advancements and evolution in tech have significantly facilitated the process. For instance, although a bit more theoretical unless I am wrong the usage of AR and VR are being explored for their capabilities in facilitating data visualization. They offer a new perspective that can offer deeper insights and understanding. An example is medical researchers using VR to visualize complex biological data.
-        Some of the multiple forms included in the text are Bar Charts, Pie charts, line graphs, histograms, scatter plots, heat maps, area charts and tree maps. They’re discussed individually further in detail. These are used in different areas, heatmaps for example, are often used in football games to detail the player’s movement, identifying hotspots (areas where they occupied the most during a match), and/or player performance evaluation. 
-      </p>  
-      <p>  The text also expands upon the 4 theories of preattentive processing in human perception: feature integration theory, texton theory, similarity theory, and guided search theory. 
-        The Feature integration theory is one developed by Anne Treismann and Garry Gelade, suggesting that features are detected attentively but objects, are identified separately. Basically, preattentive processing is described as the almost instant or effortless identification of visual features without the need for focused attention. 
-        Focused attention processing, on the other hand, involves the brain trying to find certain features or regions of interest to integrate the features detected in the preattentive stage. 
-        The texton theory focuses on studying patterns and how the human system detects variations of specific order stats. Certain features detected in the early visual system are termed “textons”: elongated blobs, terminators and crossing of line segments. 
-        The similarity theory proposes that preattentive processing is based on the similarity of visual features. Objects are grouped together by the human visual system based on their size, shape, color and other visual features. In a group of colored objects of different shapes for example, our preattentive processing will allow us to group objects together with similar shapes and colors,allowing us to identify the different clusters almost effortlessly. 
-      </p>  
-        The Guided Search Theory suggests that preattentive processing is guided by attentional control from the top-down. The human visual system uses prior knowledge to guide attention to relevant features and objects. 
-    </p>
-
-    </article>
+  <section class="button-container">
+    <a class="tile-button home-button" href="index.html" onmouseover="changeDescriptor('Home Page')">Home</a>
+    <a class="tile-button blog-button" href="blog.html" onmouseover="changeDescriptor('Blogs')">Blogs</a>
+    <a class="tile-button design-button" href="design.html" onmouseover="changeDescriptor('Design')">Design</a>
+    <a class="tile-button vis-button" href="datavis.html" onmouseover="changeDescriptor('Data Visualization')">Visualization</a>
+    <a class="tile-button art-button" href="dataart.html" onmouseover="changeDescriptor('Data Art')">Data Art</a>
   </section>
   
 
-  <section id="Style Guide" class="style-guide-section">
-    <h2>Styles </h2>
-        <section id="Wireframes">
-
-
-        </section>
-
-
-        <section id="styles">
-            
-                <article>
-                    <h2>IxD process</h2>
-                        The goal is to create an easy-to-navigate website containing pieces of my work from this block. 
-                </article>
-           
-                <section id="styles" class="style-guide-section">
-                  <article>
-                    <img src="WireFrame.jpeg" alt="WireFrames Example">
-                    <h2>WireFrames</h2>
-                    <p>
-                      I've decided for now at least, to have all of my site's content be on a single page, instead of multiple.
-                    </p>
-                  </article>
-                </section>
-                
-           
-                <article>
-                    <h2>
-                        Style Guide
-                    </h2>
-                        I went for these colors, because they're easier on the eyes. I initially tried using more colorful warmer colors, but opted against it. I want something more on the neutral side, which is why I went for something on the grayscale.<p> In terms of the font and text, i chose the Roboto style, because it's quite engaging.</p>
-                      
-                      <p>
-                            <p>  font : Roboto</p>
-                            <p>  colors: white #f5f5f5, grey #333</p>
-
-
-                      </p>
-
-                </article>
-           
-        </section>
+  <section class="about">
+    <h2>More</h2>
+    <p>The site will include work from across the block</p>
   </section>
-
-  <section id="dataart" class="data-art-section">
-    <h2>Data Art</h2>
-
-  </section>
-
-  <section id="datavis" class="data-vis-section">
-    <h2>Data visualization</h2>
-
-  </section>
+  
 
 
-<script src="script.js"></script>
 
+  <script src="script.js"></script>
 </body>
 </html>
+
