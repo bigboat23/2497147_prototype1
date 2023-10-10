@@ -165,7 +165,7 @@ function createScatterPlot(data) {
   const margin = { top: 20, right: 20, bottom: 30, left: 40 };
 
   // Create an SVG container
-  const svg = d3.select('#visualization-container')
+  const svg = d3.select('#scatter-plot')
     .append('svg')
     .attr('width', width)
     .attr('height', height);
@@ -179,39 +179,51 @@ function createScatterPlot(data) {
     .domain([d3.min(data, d => d.lat), d3.max(data, d => d.lat)])
     .range([height - margin.bottom, margin.top]);
 
+  // Reference the tooltip element
+  const tooltip = document.getElementById('tooltip');
+  const tooltipContent = document.getElementById('tooltip-content');
+
   // Create circles for each data point
   svg.selectAll('circle')
-  .data(data)
-  .enter()
-  .append('circle')
-  .attr('cx', d => xScale(d.lon))
-  .attr('cy', d => yScale(d.lat))
-  .attr('r', 4) // Radius of the circles
-  .attr('class', 'circle'); // Apply the circle class
+    .data(data)
+    .enter()
+    .append('circle')
+    .attr('cx', d => xScale(d.lon))
+    .attr('cy', d => yScale(d.lat))
+    .attr('r', 4) // Radius of the circles
+    .attr('class', 'circle') // Apply the circle class
+    .on('mouseover', (event, d) => {
+      // Show the tooltip
+      tooltip.style.left = event.pageX + 'px';
+      tooltip.style.top = event.pageY + 'px';
+      tooltipContent.textContent = `Lat: ${d.lat}, Lon: ${d.lon}`;
+      tooltip.classList.add('show');
+    })
+    .on('mouseout', () => {
+      // Hide the tooltip
+      tooltip.classList.remove('show');
+    });
 
-// Create x and y axes
-svg.append('g')
-  .attr('transform', `translate(0, ${height - margin.bottom})`)
-  .call(d3.axisBottom(xScale))
-  .attr('class', 'axis'); // Apply the axis class
+  // Create x and y axes
+  svg.append('g')
+    .attr('transform', `translate(0, ${height - margin.bottom})`)
+    .call(d3.axisBottom(xScale))
+    .attr('class', 'axis'); // Apply the axis class
 
-svg.append('g')
-  .attr('transform', `translate(${margin.left}, 0)`)
-  .call(d3.axisLeft(yScale))
-  .attr('class', 'axis'); // Apply the axis class
+  svg.append('g')
+    .attr('transform', `translate(${margin.left}, 0)`)
+    .call(d3.axisLeft(yScale))
+    .attr('class', 'axis'); // Apply the axis class
 
-// Add labels for the axes
-svg.append('text')
-  .attr('x', width / 2)
-  .attr('y', height)
-  .attr('text-anchor', 'middle')
- 
+  // Add labels for the axes
+  svg.append('text')
+    .attr('x', width / 2)
+    .attr('y', height)
+    .attr('text-anchor', 'middle');
 
-svg.append('text')
-  .attr('transform', 'rotate(-90)')
-  .attr('x', -height / 2)
-  .attr('y', margin.left / 2)
-  .attr('text-anchor', 'middle')
-  
+  svg.append('text')
+    .attr('transform', 'rotate(-90)')
+    .attr('x', -height / 2)
+    .attr('y', margin.left / 2)
+    .attr('text-anchor', 'middle');
 }
-
